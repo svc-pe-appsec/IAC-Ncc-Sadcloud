@@ -26,6 +26,7 @@ jobs:
           sudo npm i -g snyk-filter
           snyk --version
           snyk auth ${{secrets.SNYK_AUTH}}
+          snyk config set org=ac3d0c96-4c5d-442a-a027-e2361aa814bf
 
       - name: Snyk IaC # Remove || true to fail if there are vulnerabilities
         run: |
