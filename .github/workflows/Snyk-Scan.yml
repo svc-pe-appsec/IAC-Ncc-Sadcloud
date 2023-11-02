@@ -30,6 +30,7 @@ jobs:
 
       - name: Snyk IaC # Remove || true to fail if there are vulnerabilities
         run: |
+            ls -la
             snyk iac test --report
                     
 #      - name: Building Docker Images
